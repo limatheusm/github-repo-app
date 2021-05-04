@@ -24,6 +24,8 @@
 		FEA1FA81263EE96400D6DD45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1FA80263EE96400D6DD45 /* SceneDelegate.swift */; };
 		FEA1FA88263EE96500D6DD45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA1FA87263EE96500D6DD45 /* Assets.xcassets */; };
 		FEA1FA8B263EE96500D6DD45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA1FA89263EE96500D6DD45 /* LaunchScreen.storyboard */; };
+		FEDA5A542641A5FF005A7AC9 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA5A532641A5FF005A7AC9 /* Observable.swift */; };
+		FEDA5A582641A691005A7AC9 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA5A572641A691005A7AC9 /* KeychainManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		FEA1FA87263EE96500D6DD45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEA1FA8A263EE96500D6DD45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEA1FA8C263EE96500D6DD45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEDA5A532641A5FF005A7AC9 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		FEDA5A572641A691005A7AC9 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +129,11 @@
 		FE5EAC84263EF44400889331 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FEDA5A562641A677005A7AC9 /* Manager */,
 				FE56EB432640C70C0094532B /* AppConfig */,
 				FE56EB422640C6FD0094532B /* AppColor */,
 				FE5EAC8A263F003200889331 /* Coordinator */,
+				FEDA5A532641A5FF005A7AC9 /* Observable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -249,6 +255,14 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		FEDA5A562641A677005A7AC9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FEDA5A572641A691005A7AC9 /* KeychainManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,6 +274,7 @@
 				FEA1FA77263EE96400D6DD45 /* Sources */,
 				FEA1FA78263EE96400D6DD45 /* Frameworks */,
 				FEA1FA79263EE96400D6DD45 /* Resources */,
+				22F75FF261366A251A1977B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,6 +354,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		22F75FF261366A251A1977B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubRepoApp/Pods-GithubRepoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GithubRepoApp/Pods-GithubRepoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GithubRepoApp/Pods-GithubRepoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -346,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDA5A542641A5FF005A7AC9 /* Observable.swift in Sources */,
 				FE56EB3A2640AC8F0094532B /* AboutCoordinator.swift in Sources */,
 				FE5EAC9A263F099100889331 /* AppCoordinator.swift in Sources */,
 				FE56EB352640ABBE0094532B /* MainCoordinator.swift in Sources */,
@@ -354,6 +387,7 @@
 				FE56EB4F2640C86D0094532B /* AppColor.swift in Sources */,
 				FE5EAC8F263F016A00889331 /* SearchViewController.swift in Sources */,
 				FEA1FA7F263EE96400D6DD45 /* AppDelegate.swift in Sources */,
+				FEDA5A582641A691005A7AC9 /* KeychainManager.swift in Sources */,
 				FE5EAC97263F038000889331 /* Coordinator.swift in Sources */,
 				FE56EB322640AB870094532B /* SearchCoordinator.swift in Sources */,
 				FE56EB4A2640C7500094532B /* GithubTabBarScene.swift in Sources */,

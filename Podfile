@@ -6,5 +6,6 @@ target 'GithubRepoApp' do
   use_frameworks!
 
   # Pods for GithubRepoApp
+  pod 'KeychainSwift'
 
 end
