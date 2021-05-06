@@ -14,18 +14,18 @@ enum GithubTabBarScene: Int, CaseIterable, TabBarScene {
     var iconNameOn: String {
         switch self {
         case .search:
-            return "infoTabIconOn"
-        case .about:
             return "searchTabIconOn"
+        case .about:
+            return "infoTabIconOn"
         }
     }
     
     var iconNameOff: String {
         switch self {
         case .search:
-            return "infoTabIconOff"
-        case .about:
             return "searchTabIconOff"
+        case .about:
+            return "infoTabIconOff"
         }
     }
     
