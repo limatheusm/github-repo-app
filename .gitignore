@@ -2,7 +2,7 @@
 .DS_Store
 
 # Ignore Xcode user-related files
-*xcworkspace/xcuserdata/*
+**/xcuserdata/*
 
 # Ignore AppCode user-related files
 .idea/
