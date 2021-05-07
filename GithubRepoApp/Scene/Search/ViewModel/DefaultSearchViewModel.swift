@@ -10,6 +10,8 @@ import Foundation
 class DefaultSearchViewModel: SearchViewModel {
     private let searchRepository: SearchRepository
     
+    private weak var coordinator: SearchCoordinator?
+    
     // MARK: - Output
     
     let errorMessage: Observable<String?> = .init(nil)
@@ -18,7 +20,8 @@ class DefaultSearchViewModel: SearchViewModel {
     
     // MARK: - Object Lifecycle
     
-    init(searchRepository: SearchRepository = DefaultSearchRepository()) {
+    init(coordinator: SearchCoordinator, searchRepository: SearchRepository = DefaultSearchRepository()) {
+        self.coordinator = coordinator
         self.searchRepository = searchRepository
         self.bind(to: searchRepository)
     }

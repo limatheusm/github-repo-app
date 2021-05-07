@@ -1,5 +1,5 @@
 //
-//  DefaultSearchService.swift
+//  RemoteSearchService.swift
 //  GithubRepoApp
 //
 //  Created by Matheus Lima on 06/05/21.
@@ -8,7 +8,7 @@
 import Foundation
 import Moya
 
-class DefaultSearchService: SearchService {
+class RemoteSearchService: SearchService {
     private let provider = MoyaProvider<GithubAPI>()
     
     func fetchRepos(with query: String, completion: @escaping (Result<SearchReposResponse, Error>) -> Void) {

@@ -13,7 +13,7 @@ class DefaultSearchRepository: SearchRepository {
     let repositories: Observable<[Repo]> = .init([])
     let state: Observable<RepositoryState<SearchRepositoryError>> = .init(.idle)
     
-    init(dataSource: SearchDataSource = DefaultSearchDataSource()) {
+    init(dataSource: SearchDataSource = RemoteSearchDataSource()) {
         self.dataSource = dataSource
     }
     

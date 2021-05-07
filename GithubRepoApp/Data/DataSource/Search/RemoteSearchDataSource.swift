@@ -1,5 +1,5 @@
 //
-//  DefaultSearchDataSource.swift
+//  RemoteSearchDataSource.swift
 //  GithubRepoApp
 //
 //  Created by Matheus Lima on 06/05/21.
@@ -7,10 +7,10 @@
 
 import Foundation
 
-class DefaultSearchDataSource: SearchDataSource {
+class RemoteSearchDataSource: SearchDataSource {
     private let service: SearchService
     
-    init(service: SearchService = DefaultSearchService()) {
+    init(service: SearchService = RemoteSearchService()) {
         self.service = service
     }
     

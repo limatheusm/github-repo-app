@@ -19,7 +19,8 @@ class SearchCoordinator: NavigationCoordinator {
 
     func start() {
         let searchViewController = SearchViewController()
-        searchViewController.bind(to: DefaultSearchViewModel())
+        let searchViewModel = DefaultSearchViewModel(coordinator: self)
+        searchViewController.bind(to: searchViewModel)
         self.rootViewController.viewControllers = [searchViewController]
     }
 }
