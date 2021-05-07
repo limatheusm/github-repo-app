@@ -7,5 +7,6 @@ target 'GithubRepoApp' do
 
   # Pods for GithubRepoApp
   pod 'KeychainSwift'
+  pod 'Moya', '~> 14.0'
 
 end

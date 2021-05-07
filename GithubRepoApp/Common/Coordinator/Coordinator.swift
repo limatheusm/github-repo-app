@@ -14,7 +14,7 @@ protocol Coordinator: class {
     func start()
 }
 
-extension Coordinator {    
+extension Coordinator {
     func start(coordinator: Coordinator) {
         self.childCoordinators.append(coordinator)
         coordinator.start()

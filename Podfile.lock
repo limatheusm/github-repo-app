@@ -1,16 +1,26 @@
 PODS:
+  - Alamofire (5.4.1)
   - KeychainSwift (19.0.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
 
 DEPENDENCIES:
   - KeychainSwift
+  - Moya (~> 14.0)
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - KeychainSwift
+    - Moya
 
 SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
 
-PODFILE CHECKSUM: 7e05ea22cb2f1f40adee65fa6ca6c2443dead11f
+PODFILE CHECKSUM: db188a48ba38bbf5b593c7a4c952c4326afe8b97
 
 COCOAPODS: 1.10.1
