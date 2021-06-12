@@ -22,7 +22,7 @@ class SearchViewController: UIViewController, ViewModelBindable {
         self.viewModel?.loading.addObserver(self, observerBlock: { [weak self] isLoading in
             self?.onViewModelLoadingUpdate(isLoading)
         })
-        self.viewModel?.repoCellViewModels.addObserver(self, observerBlock: { [weak self] repoCellViewModels in
+        self.viewModel?.repoCellViewModels.addAndNotify(observer: self, observerBlock: { [weak self] repoCellViewModels in
             self?.onViewModelRepoCellViewModelsUpdate(repoCellViewModels)
         })
     }

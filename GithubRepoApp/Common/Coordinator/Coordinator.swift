@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol Coordinator: class {
+protocol Coordinator: AnyObject {
     var childCoordinators: [Coordinator] { get set }
     var isCompleted: (() -> Void)? { get set }
     func start()

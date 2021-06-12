@@ -23,8 +23,8 @@ class DefaultSearchRepository: SearchRepository {
             switch result {
             case .failure(let error):
                 self?.state.value = .error(.generic(errorMessage: error.localizedDescription))
-            case .success(let repos):
-                self?.repositories.value = repos
+            case .success(let reposResponse):
+                self?.repositories.value = reposResponse.map { RepoResponseMapper.map($0) }
                 self?.state.value = .idle
             }
         }

@@ -18,7 +18,7 @@ class RemoteSearchService: SearchService {
                 case .failure(let error):
                     throw error
                 case .success(let response):
-                    let repoResponse = try response.map(SearchReposResponse.self)
+                    let repoResponse = try response.map(SearchReposResponse.self)                    
                     completion(.success(repoResponse))
                 }
             } catch {

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SearchDataSource {
-    func getRepos(with query: String, completion: @escaping (_ result: Result<[Repo], Error>) -> Void)
+    func getRepos(with query: String, completion: @escaping (_ result: Result<[RepoResponse], Error>) -> Void)
 }

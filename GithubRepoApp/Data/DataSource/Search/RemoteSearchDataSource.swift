@@ -14,13 +14,13 @@ class RemoteSearchDataSource: SearchDataSource {
         self.service = service
     }
     
-    func getRepos(with query: String, completion: @escaping (Result<[Repo], Error>) -> Void) {
+    func getRepos(with query: String, completion: @escaping (Result<[RepoResponse], Error>) -> Void) {
         self.service.fetchRepos(with: query) { result in
             switch result {
             case .failure(let error):
                 completion(.failure(error))
             case .success(let searchReposResponse):
-                let repos = searchReposResponse.items.map { RepoResponseMapper.map($0) }
+                let repos = searchReposResponse.items
                 completion(.success(repos))
             }
         }

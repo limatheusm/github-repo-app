@@ -37,6 +37,8 @@
 		FEA1FA81263EE96400D6DD45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA1FA80263EE96400D6DD45 /* SceneDelegate.swift */; };
 		FEA1FA88263EE96500D6DD45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA1FA87263EE96500D6DD45 /* Assets.xcassets */; };
 		FEA1FA8B263EE96500D6DD45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA1FA89263EE96500D6DD45 /* LaunchScreen.storyboard */; };
+		FEA2BBD626487C2300606855 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA2BBD426487C2300606855 /* RepoCell.swift */; };
+		FEA2BBD726487C2300606855 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA2BBD526487C2300606855 /* RepoCell.xib */; };
 		FEDA5A542641A5FF005A7AC9 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA5A532641A5FF005A7AC9 /* Observable.swift */; };
 		FEDA5A582641A691005A7AC9 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA5A572641A691005A7AC9 /* KeychainManager.swift */; };
 		FEF03B162643823C0048096C /* RepoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF03B152643823C0048096C /* RepoResponse.swift */; };
@@ -81,6 +83,8 @@
 		FEA1FA87263EE96500D6DD45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEA1FA8A263EE96500D6DD45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEA1FA8C263EE96500D6DD45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEA2BBD426487C2300606855 /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		FEA2BBD526487C2300606855 /* RepoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		FEDA5A532641A5FF005A7AC9 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		FEDA5A572641A691005A7AC9 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		FEF03B152643823C0048096C /* RepoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoResponse.swift; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 				F3AF706259BBE60E7C2AF9B6 /* Pods-GithubRepoApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FE36FB23264752BB00639466 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEA2BBD426487C2300606855 /* RepoCell.swift */,
+				FEA2BBD526487C2300606855 /* RepoCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FE56EB302640AA070094532B /* Main */ = {
@@ -322,6 +335,7 @@
 		FE7D3C522644B4450050CB1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE36FB23264752BB00639466 /* Cell */,
 				FE5EAC8D263F016A00889331 /* SearchViewController.swift */,
 				FE5EAC8E263F016A00889331 /* SearchViewController.xib */,
 			);
@@ -457,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEA1FA8B263EE96500D6DD45 /* LaunchScreen.storyboard in Resources */,
+				FEA2BBD726487C2300606855 /* RepoCell.xib in Resources */,
 				FEA1FA88263EE96500D6DD45 /* Assets.xcassets in Resources */,
 				FE56EB3F2640ACBD0094532B /* AboutViewController.xib in Resources */,
 				FE5EAC90263F016A00889331 /* SearchViewController.xib in Resources */,
@@ -532,6 +547,7 @@
 				FEDA5A582641A691005A7AC9 /* KeychainManager.swift in Sources */,
 				FE7D3C4D2644B09E0050CB1C /* DefaultSearchRepository.swift in Sources */,
 				FE7D3C552644B4530050CB1C /* SearchViewModel.swift in Sources */,
+				FEA2BBD626487C2300606855 /* RepoCell.swift in Sources */,
 				FE4EB88D2644BF5B0009ABFF /* RepoCellViewModel.swift in Sources */,
 				FEF03B1B264382FC0048096C /* RepoOwnerResponse.swift in Sources */,
 				FEF03B2626438AE70048096C /* DTOMapper.swift in Sources */,
