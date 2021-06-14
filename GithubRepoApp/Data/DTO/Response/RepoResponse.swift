@@ -7,32 +7,14 @@
 
 import Foundation
 
-struct RepoResponse: Codable {
-    let id: UInt64
-    let name: String
-    let fullName: String
-    let owner: RepoOwnerResponse
-    let url: String?
-    let description: String?
-    let language: String?
-    let starsCount: Int
-    
-    private enum CodingKeys: String, CodingKey {
-        case id, name, owner, description, language
-        case fullName = "full_name"
-        case url = "html_url"
-        case starsCount = "stargazers_count"
-    }
-}
-
 struct RepoResponseMapper: DTOMapper {
     static func map(_ dto: RepoResponse) -> Repo {
-        var url: URL? = nil
-        
+        var url: URL?
+
         if let urlString = dto.url {
             url = URL(string: urlString)
         }
-        
+
         return Repo(
             id: dto.id,
             name: dto.name,
@@ -43,5 +25,23 @@ struct RepoResponseMapper: DTOMapper {
             language: dto.language,
             starsCount: dto.starsCount
         )
+    }
+}
+
+struct RepoResponse: Codable {
+    let id: UInt64
+    let name: String
+    let fullName: String
+    let owner: RepoOwnerResponse
+    let url: String?
+    let description: String?
+    let language: String?
+    let starsCount: Int
+
+    private enum CodingKeys: String, CodingKey {
+        case id, name, owner, description, language
+        case fullName = "full_name"
+        case url = "html_url"
+        case starsCount = "stargazers_count"
     }
 }

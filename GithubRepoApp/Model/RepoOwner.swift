@@ -11,4 +11,3 @@ struct RepoOwner {
     let avatarUrl: URL?
     let login: String
 }
-

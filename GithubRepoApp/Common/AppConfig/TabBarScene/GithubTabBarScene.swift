@@ -10,7 +10,7 @@ import Foundation
 enum GithubTabBarScene: Int, CaseIterable, TabBarScene {
     case search
     case about
-    
+
     var iconNameOn: String {
         switch self {
         case .search:
@@ -19,7 +19,7 @@ enum GithubTabBarScene: Int, CaseIterable, TabBarScene {
             return "infoTabIconOn"
         }
     }
-    
+
     var iconNameOff: String {
         switch self {
         case .search:
@@ -28,7 +28,7 @@ enum GithubTabBarScene: Int, CaseIterable, TabBarScene {
             return "infoTabIconOff"
         }
     }
-    
+
     var title: String {
         switch self {
         case .search:
@@ -37,7 +37,7 @@ enum GithubTabBarScene: Int, CaseIterable, TabBarScene {
             return "About"
         }
     }
-    
+
     var coordinator: NavigationCoordinator {
         switch self {
         case .search:

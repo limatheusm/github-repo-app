@@ -17,6 +17,6 @@ typealias SearchRepositoryState = RepositoryState<SearchRepositoryError>
 protocol SearchRepository {
     var repositories: Observable<[Repo]> { get }
     var state: Observable<SearchRepositoryState> { get }
-    
+
     func search(with query: String)
 }

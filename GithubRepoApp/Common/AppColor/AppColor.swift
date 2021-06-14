@@ -13,8 +13,8 @@ enum AppColor: String {
     case darkGray
     case lightGray
     case white
-    
+
     var color: UIColor {
-        return UIColor(named: self.rawValue) ?? .black
+        UIColor(named: self.rawValue) ?? .black
     }
 }

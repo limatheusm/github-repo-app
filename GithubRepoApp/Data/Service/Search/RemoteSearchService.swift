@@ -10,7 +10,7 @@ import Moya
 
 class RemoteSearchService: SearchService {
     private let provider = MoyaProvider<GithubAPI>()
-    
+
     func fetchRepos(with query: String, completion: @escaping (Result<SearchReposResponse, Error>) -> Void) {
         self.provider.request(.searchRepositories(query: query)) { result in
             do {
@@ -18,7 +18,7 @@ class RemoteSearchService: SearchService {
                 case .failure(let error):
                     throw error
                 case .success(let response):
-                    let repoResponse = try response.map(SearchReposResponse.self)                    
+                    let repoResponse = try response.map(SearchReposResponse.self)
                     completion(.success(repoResponse))
                 }
             } catch {

@@ -8,5 +8,4 @@
 import UIKit
 
 class RepoCell: UITableViewCell {
-
 }

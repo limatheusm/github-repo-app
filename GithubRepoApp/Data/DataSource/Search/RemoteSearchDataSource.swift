@@ -9,11 +9,11 @@ import Foundation
 
 class RemoteSearchDataSource: SearchDataSource {
     private let service: SearchService
-    
+
     init(service: SearchService = RemoteSearchService()) {
         self.service = service
     }
-    
+
     func getRepos(with query: String, completion: @escaping (Result<[RepoResponse], Error>) -> Void) {
         self.service.fetchRepos(with: query) { result in
             switch result {
