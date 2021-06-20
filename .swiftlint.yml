@@ -1,5 +1,4 @@
 opt_in_rules:
-- attributes
 - anyobject_protocol
 - closure_body_length
 - closure_end_indentation
@@ -19,7 +18,6 @@ opt_in_rules:
 - explicit_self
 - fallthrough
 - fatal_error_message
-- file_name
 - file_name_no_space
 - file_types_order
 - first_where
@@ -27,7 +25,6 @@ opt_in_rules:
 - force_unwrapping
 - implicit_return
 - implicitly_unwrapped_optional
-- indentation_width
 - joined_default_parameter
 - last_where
 - let_var_whitespace
@@ -52,7 +49,6 @@ opt_in_rules:
 - sorted_first_last
 - sorted_imports
 - static_operator
-- strict_fileprivate
 - switch_case_on_newline
 - toggle_bool
 - type_contents_order
@@ -71,12 +67,17 @@ excluded:
 - Pods
 - SwiftLint/Common/3rdPartyLib
 
+closure_body_length:
+    warning: 50
+
 force_cast: error
 force_try: error
 
 identifier_name:
   excluded:
     - id
+  min_length: 2
+  max_length: 60
 
 implicit_return:
     included: [getter, closure]
@@ -91,12 +92,25 @@ function_body_length:
     warning: 80
     error: 160
 
+function_parameter_count:
+    warning: 7
+    error: 10
+
+multiline_arguments:
+    only_enforce_after_first_closure_on_first_line: true
+
+nesting:
+    type_level: 2
+
 type_body_length:
-    warning: 300
-    error: 500
+    warning: 500
+    error: 800
 
 type_contents_order:
     order: [[SwiftLintFramework.TypeContent.case], [SwiftLintFramework.TypeContent.typeAlias, SwiftLintFramework.TypeContent.associatedType], [SwiftLintFramework.TypeContent.subtype], [SwiftLintFramework.TypeContent.ibInspectable], [SwiftLintFramework.TypeContent.ibOutlet], [SwiftLintFramework.TypeContent.typeProperty], [SwiftLintFramework.TypeContent.instanceProperty], [SwiftLintFramework.TypeContent.initializer], [SwiftLintFramework.TypeContent.typeMethod], [SwiftLintFramework.TypeContent.viewLifeCycleMethod], [SwiftLintFramework.TypeContent.ibAction], [SwiftLintFramework.TypeContent.otherMethod], [SwiftLintFramework.TypeContent.subscript], [SwiftLintFramework.TypeContent.deinitializer]]
+
+type_name:
+    max_length: 60
 
 file_length:
     warning: 1000
@@ -108,3 +122,4 @@ cyclomatic_complexity:
     error: 25
 
 reporter: "xcode"
+
